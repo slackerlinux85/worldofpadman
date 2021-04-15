@@ -21,9 +21,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 //
 #include "ui_local.h"
-#include "../game/wopg_sphandling.h"
-
-#include "../game/wopg_spstoryfiles.h"
+//#include "../game/wopg_sphandling.h"
+//#include "../game/wopg_spstoryfiles.h"
 
 /*
 ===============================================================================
@@ -192,6 +191,8 @@ void UI_DrawConnectScreen( qboolean overlay ) {
 
 	Menu_Cache();
 
+	// @todo: disabling wop_sp for now (messy dependencies) ~smiley
+/*
 	if(wop_specialSPLoadingScreen.integer) {
 		static int tmp = 0;
 
@@ -234,18 +235,16 @@ void UI_DrawConnectScreen( qboolean overlay ) {
 				}
 			}
 			else { //TODO: if we don't have a comic show some special loading screen (padman in the "teleporting" tunnel or something like that)
-/*				UI_FillRect(0,0,640,480,colorCyan);
-				UI_FillRect(10*tmp,0,20,20,colorBlack);
-
-				UI_DrawStringNS(100,100,va("storyelement: %s",info),0,16,colorMagenta);
-*/
+//				UI_FillRect(0,0,640,480,colorCyan);
+//				UI_FillRect(10*tmp,0,20,20,colorBlack);
+//				UI_DrawStringNS(100,100,va("storyelement: %s",info),0,16,colorMagenta);
 			}
 			++tmp;
 
 			return;
 		}
 	}
-
+*/
 	if ( !overlay ) {
 		// draw the dialog background
 		UI_SetColor( color_white );

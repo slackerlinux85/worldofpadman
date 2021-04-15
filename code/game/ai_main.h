@@ -48,13 +48,13 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #define LTG_DEFENDKEYAREA			3	//defend a key area
 #define LTG_GETFLAG					4	//get the enemy flag
 #define LTG_RUSHBASE				5	//rush to the base
-//#define LTG_RETURNFLAG				6	//return the flag
-#define LTG_BALLCAMP					7	//camp somewhere
-//#define LTG_CAMPORDER				8	//ordered to camp somewhere
-//#define LTG_PATROL					9	//patrol
+#define LTG_RETURNFLAG				6	//return the flag
+#define LTG_BALLCAMP				7	//camp somewhere
+#define LTG_CAMPORDER				8	//ordered to camp somewhere
+#define LTG_PATROL					9	//patrol
 #define LTG_GETITEM					10	//get an item
-//#define LTG_KILL					11	//kill someone
-//#define LTG_HARVEST					12	//harvest skulls
+#define LTG_KILL					11	//kill someone
+#define LTG_HARVEST					12	//harvest skulls
 #define LTG_ATTACKENEMYBASE			13	//attack the enemy base
 #define LTG_GO_FOR_HEALTH			14
 #define LTG_MAKELOVE_ONTOP			15
@@ -257,6 +257,7 @@ typedef struct bot_state_s
 	//float defendaway_range;							//max travel time away from defend area
 	float rushbaseaway_time;						//time away from rushing to the base
 	float attackaway_time;							//time away from attacking the enemy base
+	float ctfroam_time;								//time the bot is roaming in ctf
 	float killedenemy_time;							//time the bot killed the enemy
 	float arrive_time;								//time arrived (at companion)
 	float lastair_time;								//last time the bot had air

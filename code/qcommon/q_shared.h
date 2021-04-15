@@ -89,6 +89,10 @@ extern int demo_protocols[];
   #define PRODUCT_VERSION "1.6.1"
 #endif
 
+#ifndef PRODUCT_DATE
+#  define PRODUCT_DATE __DATE__
+#endif
+
 #define Q3_VERSION PRODUCT_NAME " " PRODUCT_VERSION " " PRODUCT_RELEASE
 
 #define MAX_TEAMNAME		32

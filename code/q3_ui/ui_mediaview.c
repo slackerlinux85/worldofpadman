@@ -60,7 +60,8 @@ static void MediaView_MenuDraw( void ) {
 		{
 			e_status cinStatus;
 			cinStatus = trap_CIN_RunCinematic(s_mediaview_menu.CINhandle);
-			DrawLine(0,0,20,20,1,colorBlack); //note: DrawCinematic is no render-cmd, because of that it will probably be drawn before the previously done 2D-drawings are really drawn (using my Advanced2D, leads to a scene-randering, which seems to make sure that all 2D things are drawn)
+			// @todo: outcommented because messy dependencies ~smiley
+//			DrawLine(0,0,20,20,1,colorBlack); //note: DrawCinematic is no render-cmd, because of that it will probably be drawn before the previously done 2D-drawings are really drawn (using my Advanced2D, leads to a scene-randering, which seems to make sure that all 2D things are drawn)
 			trap_CIN_DrawCinematic(s_mediaview_menu.CINhandle);
 
 			if(cinStatus!=FMV_PLAY) {

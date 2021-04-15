@@ -123,7 +123,7 @@ void BotPrintTeamGoal(bot_state_t *bs) {
 			BotAI_Print(PRT_MESSAGE, "%s: I'm gonna kill someone for %1.0f secs\n", netname, t);
 			break;
 		}
-		case LTG_CAMP:
+		case LTG_BALLCAMP:
 		case LTG_CAMPORDER:
 		{
 			BotAI_Print(PRT_MESSAGE, "%s: I'm gonna camp for %1.0f secs\n", netname, t);
